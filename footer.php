@@ -32,6 +32,8 @@
 
 <?php endif; ?>
 
+<?php wp_footer(); ?>
+
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/jquery.easing.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/bootstrap.min.js"></script>
@@ -262,7 +264,6 @@ if(is_page('portfolio')
 
 
 
-<?php wp_footer(); ?>
 
 </body>
 </html>
