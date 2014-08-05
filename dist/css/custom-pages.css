@@ -1,0 +1,13 @@
+body {
+    background-image: url('../../assets/images/portfolio-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font: 1.2em/20px "raleway";
+    color: #666;
+    line-height: 1;
+}

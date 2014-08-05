@@ -1,0 +1,16 @@
+/*
+ Theme Name:   Ctaylor_v2
+ Theme URI:    http://www.shawnnolan.com/themes/ctaylor_v2/
+ Description:  Photocrati child theme
+ Author:       Shawn Nolan
+ Author URI:   http://www.shawnnolan.com
+ Template:     photocrati-theme
+ Version:      0.0.1
+ Tags:         responsive, photos, videos
+ Text Domain:  photocrati-theme-child
+*/
+
+@import "dist/css/fonts.css";
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */

@@ -1,0 +1,1 @@
+jQuery.noConflict();jQuery(document).ready(function(){jQuery("ul.sf-menu").supersubs({minWidth:12,maxWidth:27,extraWidth:1}).superfish({delay:400,animation:{opacity:'show',height:'show'},speed:'fast',autoArrows:false,dropShadows:false})});

@@ -1,0 +1,5 @@
+repo: 67fd8f67fd90e7a0bef6b1294e59a7c417f496a2
+node: 85dbb991aef412ca56164317bfd101914143d82c
+branch: autoupdate-admin-main-0.2
+latesttag: 0.1
+latesttagdistance: 8
