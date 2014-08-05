@@ -41,7 +41,7 @@ global $id;
                     </div>
                 </div>
                 <div class="dropshadow-img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-shadow.png" class="img-thumbnail" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-shadow.png" class="img-thumbnail" />
                 </div>
 
                 <?php get_template_part('footer', 'wec'); ?>

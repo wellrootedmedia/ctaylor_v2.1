@@ -28,7 +28,7 @@ $promoSliders = query_posts(array(
             </div>
         </div>
         <div class="dropshadow-img">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-shadow.png" class="img-thumbnail" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-shadow.png" class="img-thumbnail" />
         </div>
     </div>
 </div>

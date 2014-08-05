@@ -691,7 +691,7 @@ div.navbar-collapse.collapse {
 }
 
 .post-date {
-    background: url(../../images/date-bg.png) no-repeat;
+    background: url(../../assets/images/date-bg.png) no-repeat;
     font-family: 'Raleway', sans-serif;
     height: 73px;
     position: relative;
