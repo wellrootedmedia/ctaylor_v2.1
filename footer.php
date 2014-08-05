@@ -32,8 +32,6 @@
 
 <?php endif; ?>
 
-<?php wp_footer(); ?>
-
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/jquery.easing.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/bootstrap.min.js"></script>
@@ -46,53 +44,53 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/super.sized.listview.js"></script>
 
 <?php if(is_front_page()) : ?>
-<script type="text/javascript">
-    jQuery(function($) {
+    <script type="text/javascript">
+        jQuery(function($) {
 
-        var viewpoint240 = window.matchMedia( "(max-width: 240px)" );
-        var viewpoint320 = window.matchMedia( "(max-width: 320px)" );
-        var viewpoint360 = window.matchMedia( "(max-width: 360px)" );
-        var viewpoint603 = window.matchMedia( "(max-width: 603px)" );
-        var viewpoint768 = window.matchMedia( "(max-width: 768px)" );
-        var viewpoint1024 = window.matchMedia( "(max-width: 1024px)" );
+            var viewpoint240 = window.matchMedia( "(max-width: 240px)" );
+            var viewpoint320 = window.matchMedia( "(max-width: 320px)" );
+            var viewpoint360 = window.matchMedia( "(max-width: 360px)" );
+            var viewpoint603 = window.matchMedia( "(max-width: 603px)" );
+            var viewpoint768 = window.matchMedia( "(max-width: 768px)" );
+            var viewpoint1024 = window.matchMedia( "(max-width: 1024px)" );
 
-        if (viewpoint1024.matches) {
+            if (viewpoint1024.matches) {
 
-            $('.site-bg').remove();
+                $('.site-bg').remove();
 
-            $.supersized({
-                slide_interval : 3000,
-                transition : 1,
-                transition_speed : 700,
-                slide_links : 'blank',
-                slides : [
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/1.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/2.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/3.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/4.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/5.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/6.jpg', title : '', thumb : ''},
-                    {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/7.jpg', title : '', thumb : ''}
-                ]
-            });
+                $.supersized({
+                    slide_interval : 3000,
+                    transition : 1,
+                    transition_speed : 700,
+                    slide_links : 'blank',
+                    slides : [
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/1.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/2.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/3.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/4.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/5.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/6.jpg', title : '', thumb : ''},
+                        {image : '<?php echo get_stylesheet_directory_uri();?>/assets/images/homepage-mobile-images/7.jpg', title : '', thumb : ''}
+                    ]
+                });
 
-        } else {
+            } else {
 
-            var introvid = jQuery('.intro-video');
-            var introvidplayer = jQuery('.intro-video')[0];
-            introvidplayer.play();
-            introvidplayer.addEventListener( "ended", function() {
-                jQuery('body')
-                    .find('.static-img')
-                    .css('display', 'block')
-                    .css('background-image', 'url("<?php echo get_stylesheet_directory_uri(); ?>/assets/images/promo-home-image.jpg")');
+                var introvid = jQuery('.intro-video');
+                var introvidplayer = jQuery('.intro-video')[0];
+                introvidplayer.play();
+                introvidplayer.addEventListener( "ended", function() {
+                    jQuery('body')
+                        .find('.static-img')
+                        .css('display', 'block')
+                        .css('background-image', 'url("<?php echo get_stylesheet_directory_uri(); ?>/assets/images/promo-home-image.jpg")');
 
-                introvid.fadeOut();
-            }, false );
-        }
+                    introvid.fadeOut();
+                }, false );
+            }
 
-    });
-</script>
+        });
+    </script>
 <?php endif; ?>
 
 <?php
@@ -146,10 +144,9 @@ if(is_page('portfolio')
             src="<?php echo get_stylesheet_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
     <script type="text/javascript">
-        jQuery.noConflict();
-        jQuery(document).ready(function () {
+        jQuery(function($){
 
-            jQuery('.fancybox')
+            $('.fancybox')
                 .fancybox({
                     openEffect: 'none',
                     closeEffect: 'none',
@@ -164,7 +161,7 @@ if(is_page('portfolio')
                     scrolling: 'no'
                 });
 
-            jQuery('.photocrati_lightbox_always').fancybox();
+            $('.photocrati_lightbox_always').fancybox();
 
         });
     </script>
@@ -172,9 +169,8 @@ if(is_page('portfolio')
 
 <?php if(get_post_format() != 'aside') : ?>
     <script type="text/javascript">
-        jQuery.noConflict();
-        jQuery(document).ready(function () {
-            jQuery('#promo-slides').slidesjs({
+        jQuery(function($){
+            $('#promo-slides').slidesjs({
                 width: 921,
                 height: 263,
                 play: {
@@ -237,6 +233,8 @@ if(is_page('portfolio')
             pagination: false
         });
 
+        $("#input_1_3").datepicker();
+
         $('.portfolio-thumbnail').hover(
             function () {
                 $(this).find('.portfolio-overlay')
@@ -264,6 +262,7 @@ if(is_page('portfolio')
 
 
 
+<?php wp_footer(); ?>
 
 </body>
 </html>

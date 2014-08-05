@@ -991,7 +991,7 @@ h1:first-letter {
 
 .album_grid {
     width: 264px !important;
-    min-height: 281px !important;
+    min-height: 251px !important;
     height: auto !important;
     float: left !important;
     background: #FFF !important;

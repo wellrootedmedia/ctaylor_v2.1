@@ -75,58 +75,56 @@ $postTitle = get_the_title($post->ID);
 
 <?php if(is_page('Proofing')) : ?>
 <script type="text/javascript">
-    jQuery.noConflict();
-    jQuery(function() {
-        jQuery("body")
+    jQuery(function($){
+        $("body")
             .find(".album_wrapper")
             .attr("id","otherContent");
-        jQuery("input[name=linksNewWindow]")
+        $("input[name=linksNewWindow]")
             .change(function() {
-                if(jQuery("input[name=linksNewWindow]")
+                if($("input[name=linksNewWindow]")
                     .is(":checked")) {
-                    jQuery.cookie("linksNewWindow",1,{expires:365,path:"/"});
-                    jQuery("#otherContent").show()
+                    $.cookie("linksNewWindow",1,{expires:365,path:"/"});
+                    $("#otherContent").show()
                 } else {
-                    jQuery.cookie("linksNewWindow",0,{expires:365,path:"/"});
-                    jQuery("#otherContent").hide();
+                    $.cookie("linksNewWindow",0,{expires:365,path:"/"});
+                    $("#otherContent").hide();
                 }
             });
         function a() {
-            var b = jQuery.cookie("linksNewWindow");
-            jQuery("input[name=linksNewWindow]")
+            var b = $.cookie("linksNewWindow");
+            $("input[name=linksNewWindow]")
                 .change(function() {
-                    if(jQuery("input[name=linksNewWindow]")
+                    if($("input[name=linksNewWindow]")
                         .is(":checked")) {
-                        jQuery.cookie("linksNewWindow",1,{expires:365,path:"/"});
+                        $.cookie("linksNewWindow",1,{expires:365,path:"/"});
                     } else {
-                        jQuery.cookie("linksNewWindow",0,{expires:365,path:"/"});
+                        $.cookie("linksNewWindow",0,{expires:365,path:"/"});
                     }
                 });
             if(b == 1) {
-                jQuery("#otherContent")
+                $("#otherContent")
                     .show();
-                jQuery("#linksNewWindow")
+                $("#linksNewWindow")
                     .attr("checked","checked");
             } else {
-                jQuery("#otherContent").hide();
+                $("#otherContent").hide();
             }
         }
         a()
     });
 </script>
 <script type="text/javascript">
-    jQuery.noConflict();
-    jQuery(function() {
-        jQuery("#fancyBoxLink").fancybox({
+    jQuery(function($){
+        $("#fancyBoxLink").fancybox({
             'width':'500',
             'autoSize':false,
             'onStart': function() {
-                jQuery('#myDivID')
+                $('#myDivID')
                     .css('display','block')
                     .css('overflow', 'auto');
             },
             'onClosed': function() {
-                jQuery('#myDivID')
+                $('#myDivID')
                     .css('display','none');
             }
         });
