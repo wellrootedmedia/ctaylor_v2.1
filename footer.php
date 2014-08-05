@@ -32,6 +32,8 @@
 
 <?php endif; ?>
 
+<?php wp_footer(); ?>
+
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/jquery.easing.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/bootstrap.min.js"></script>
@@ -168,63 +170,6 @@ if(is_page('portfolio')
     </script>
 <?php endif; ?>
 
-<script type="text/javascript">
-    jQuery(function($){
-
-        $('#slides-section').hide();
-        $("#slides-section").promise().done(function () {
-            $(this).show();
-        });
-
-        $('#category-blog-slides').slidesjs({
-            width: 921,
-            height: 263,
-            play: {
-                active: false,
-                auto: true,
-                interval: 5000,
-                swap: true,
-                effect: 'fade'
-            },
-            navigation: false,
-            pagination: false
-        });
-
-        $('#portfolio-slides').slidesjs({
-            play: {
-                active: false,
-                auto: true,
-                interval: 5000,
-                swap: true,
-                effect: 'fade'
-            },
-            navigation: false,
-            pagination: false
-        });
-
-        $('.portfolio-thumbnail').hover(
-            function () {
-                $(this).find('.portfolio-overlay')
-                    .css('visibility', 'visible')
-                    .css('position', 'relative')
-                    .css('top', '-200px')
-                    .css('width', '300px !important')
-                    .css('background-color', '#ffffff')
-                    .css('height', '200px')
-                    .css('color', '#92BFD5')
-                    .animate({
-                        color: "#000"
-                    }, 1000);
-            },
-            function () {
-                $(this).find('.portfolio-overlay')
-                    .css('visibility', 'hidden')
-                    .css('background', 'transparent')
-                    .animate({ color: "#92BFD5" }, 'slow');
-            });
-    });
-</script>
-
 <?php if(get_post_format() != 'aside') : ?>
     <script type="text/javascript">
         jQuery.noConflict();
@@ -256,9 +201,69 @@ if(is_page('portfolio')
     </script>
 <?php endif; ?>
 
+<script type="text/javascript">
+    jQuery(function($){
+
+        $('#slides-section').hide();
+        $("#slides-section").promise().done(function () {
+            $(this).show();
+        });
+
+        $('#category-blog-slides').slidesjs({
+            width: 921,
+            height: 263,
+            play: {
+                active: false,
+                auto: true,
+                interval: 5000,
+                swap: true,
+                effect: 'fade'
+            },
+            navigation: false,
+            pagination: false
+        });
+
+        $('#portfolio-slides').slidesjs({
+            width: 882,
+            height: 370,
+            play: {
+                active: false,
+                auto: true,
+                interval: 5000,
+                swap: true,
+                effect: 'fade'
+            },
+            navigation: false,
+            pagination: false
+        });
+
+        $('.portfolio-thumbnail').hover(
+            function () {
+                $(this).find('.portfolio-overlay')
+                    .css('visibility', 'visible')
+                    .css('position', 'relative')
+                    .css('top', '-200px')
+                    .css('width', '300px !important')
+                    .css('background-color', '#ffffff')
+                    .css('height', '200px')
+                    .css('color', '#92BFD5')
+                    .animate({
+                        color: "#000"
+                    }, 1000);
+            },
+            function () {
+                $(this).find('.portfolio-overlay')
+                    .css('visibility', 'hidden')
+                    .css('background', 'transparent')
+                    .animate({ color: "#92BFD5" }, 'slow');
+            });
+
+        $('.wp-post-image').addClass('img-thumbnail');
+    });
+</script>
 
 
-<?php wp_footer(); ?>
+
 
 </body>
 </html>
